@@ -1,16 +1,28 @@
 import "./App.css";
-import Header from "./components/Header.jsx";
+import About from "./components/About/About.jsx";
+import Header from "./components/Header/Header.jsx";
 import { Button } from "react-bootstrap";
+import { FaWhatsapp } from "react-icons/fa";
+import Services from "./components/Services/Services.jsx";
+import ContactForm from "./components/Contact/ContactForm.jsx";
+import Footer from "./components/Footer/Footer.jsx";
+
 function App() {
   return (
     <div>
       <Header />
-      <h2>¿Quiénes somos?</h2>
-      <p>
-        Somos un estudio jurídico con amplia trayectoria en derecho civil,
-        laboral y familiar.
-      </p>
-      <Button className="btn btn-primary">Hola</Button>
+      <About />
+      <Services />
+      <ContactForm />
+      <Footer />
+      <a
+        href="https://wa.me/543865689114"
+        className="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaWhatsapp style={{ marginTop: "5px" }} />
+      </a>
     </div>
   );
 }
