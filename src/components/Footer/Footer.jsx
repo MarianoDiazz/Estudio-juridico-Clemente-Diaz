@@ -10,19 +10,14 @@ const Footer = () => {
           <Col md={12} className="text-center">
             <h5>Estudio Jurídico Clemente Díaz y Asociados</h5>
             <p>Dirección: Aristobulo del valle 618, Aguilares, Tucumán</p>
-            <p>Horario: Lunes a Viernes de 8 a 18 hs</p>
+            <p>Horario: Lunes a Viernes de 8 a 12 y 17 a 21 hs</p>
             <p>
-              <FaPhone /> +54 3865 689114 | <FaEnvelope />{" "}
-              martindiaz99@hotmail.com
+              <FaPhone /> +54 3865 242660
+            </p>
+            <p>
+              <FaEnvelope /> martindiaz99@hotmail.com
             </p>
             <div className="social-links mt-3">
-              <a
-                href="https://www.instagram.com/martindiaz99"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaInstagram />
-              </a>
               <a
                 href="https://www.linkedin.com/in/martin-clemente-diaz-84453b300/"
                 target="_blank"

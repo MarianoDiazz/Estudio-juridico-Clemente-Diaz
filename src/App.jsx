@@ -20,9 +20,9 @@ function App() {
       <ContactForm />
       <Footer />
       <div className="whatsapp-container">
-        <div className="whatsapp-tooltip">¿Necesitás ayuda legal?</div>
+        <div className="whatsapp-tooltip">¿Necesitás ayuda?</div>
         <a
-          href="https://wa.me/543865242660?text=Hola,%20me%20gustaría%20consultar%20sobre%20servicios%20legales."
+          href="https://wa.me/543865242660?text=Hola%20Dr.%2C%20quisiera%20hacerle%20una%20consulta."
           className="whatsapp-float"
           target="_blank"
           rel="noopener noreferrer"

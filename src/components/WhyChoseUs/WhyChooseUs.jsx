@@ -6,7 +6,7 @@ import {
   FaBalanceScale,
 } from "react-icons/fa";
 import "./WhyChooseUs.css";
-import img from "../../assets/doctor.jpg"; // Cambia por la tuya
+import img from "../../assets/nosotros.jpg"; // Cambia por la tuya
 
 const reasons = [
   {

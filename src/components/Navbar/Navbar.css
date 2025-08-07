@@ -4,6 +4,7 @@
   padding: 10px 0;
   transition: background-color 0.3s ease;
   z-index: 999;
+  max-width: 100vw;
 }
 
 .custom-navbar .navbar-brand {
@@ -22,4 +23,10 @@
 
 .custom-navbar .nav-link:hover {
   color: #00bcd4 !important;
+}
+
+.navbar-brand img {
+  width: 9rem;
+  /* max-height: 75px; */
+  object-fit: contain;
 }

@@ -6,7 +6,8 @@ const services = [
   {
     icon: <FaBalanceScale />,
     title: "Derecho Civil",
-    description: "Contratos, daños, propiedad, sucesiones y más.",
+    description:
+      "Contratos, accidentes de tránsito, propiedad, sucesiones y más.",
   },
   {
     icon: <FaBriefcase />,
