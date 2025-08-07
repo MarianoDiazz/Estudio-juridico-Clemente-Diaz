@@ -22,7 +22,7 @@ function App() {
       <div className="whatsapp-container">
         <div className="whatsapp-tooltip">¿Necesitás ayuda legal?</div>
         <a
-          href="https://wa.me/543865689114"
+          href="https://wa.me/543865242660?text=Hola,%20me%20gustaría%20consultar%20sobre%20servicios%20legales."
           className="whatsapp-float"
           target="_blank"
           rel="noopener noreferrer"
