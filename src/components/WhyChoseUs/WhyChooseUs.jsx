@@ -26,14 +26,14 @@ const WhyChooseUs = () => {
     <section className="why-section" id="por-que-elegirnos">
       <Container>
         <Row className="align-items-center">
-          <Col lg={6} data-aos="fade-right">
+          <Col lg={6} sm={12} data-aos="fade-right">
             <img
               src={img}
               alt="Estudio jurídico"
               className="why-image d-flex justify-content-center mx-auto"
             />
           </Col>
-          <Col lg={6} data-aos="fade-left">
+          <Col lg={6} data-aos="fade-left" className="my-4">
             <h2 className="mb-4">¿Por qué elegirnos?</h2>
             <ul className="why-list">
               {reasons.map((item, index) => (
