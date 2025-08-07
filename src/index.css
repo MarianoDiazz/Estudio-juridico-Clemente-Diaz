@@ -1,0 +1,32 @@
+:root {
+  --color-bg: #f9f9f9;
+  --color-text: #222;
+  --color-accent: #1f4e79;
+  --color-accent-light: #007bff;
+  --color-footer: #0d1b2a;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Lato", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Playfair Display", serif;
+  color: var(--color-accent);
+}
+
+button,
+.btn {
+  transition: all 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

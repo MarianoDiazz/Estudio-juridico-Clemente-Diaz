@@ -1,4 +1,4 @@
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { FaBalanceScale, FaBriefcase, FaUsers } from "react-icons/fa";
 import "./Services.css";
 
@@ -6,18 +6,18 @@ const services = [
   {
     icon: <FaBalanceScale />,
     title: "Derecho Civil",
-    description: "Contratos, daños y perjuicios, propiedad, sucesiones y más.",
+    description: "Contratos, daños, propiedad, sucesiones y más.",
   },
   {
     icon: <FaBriefcase />,
     title: "Derecho Laboral",
     description:
-      "Despidos, indemnizaciones, accidentes laborales y defensa del trabajador.",
+      "Despidos, indemnizaciones, accidentes laborales, derechos del trabajador.",
   },
   {
     icon: <FaUsers />,
     title: "Derecho de Familia",
-    description: "Divorcios, alimentos, filiación, regímenes de visitas y más.",
+    description: "Divorcios, alimentos, regímenes de visitas, filiación y más.",
   },
 ];
 
@@ -26,16 +26,21 @@ const Services = () => {
     <section id="servicios" className="services-section">
       <Container>
         <h2 className="text-center mb-5">Servicios Legales</h2>
-        <Row>
+        <Row className="justify-content-center">
           {services.map((service, index) => (
-            <Col md={4} className="mb-4 fade-in-up" key={index}>
-              <Card className="text-center h-100 shadow-sm">
-                <Card.Body>
-                  <div className="icon-wrapper mb-3">{service.icon}</div>
-                  <Card.Title>{service.title}</Card.Title>
-                  <Card.Text>{service.description}</Card.Text>
-                </Card.Body>
-              </Card>
+            <Col
+              md={6}
+              lg={4}
+              className="mb-4 d-flex justify-content-center"
+              key={index}
+              data-aos="zoom-in"
+              data-aos-delay={index * 100}
+            >
+              <div className="service-card">
+                <div className="service-icon">{service.icon}</div>
+                <h5>{service.title}</h5>
+                <p>{service.description}</p>
+              </div>
             </Col>
           ))}
         </Row>
