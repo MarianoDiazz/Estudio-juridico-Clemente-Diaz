@@ -7,7 +7,7 @@ const CustomNavbar = () => {
   return (
     <Navbar expand="lg" variant="dark" fixed="top" className="custom-navbar">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="#">
           <img
             src={Logo}
             alt="Logo Estudio Jurídico"

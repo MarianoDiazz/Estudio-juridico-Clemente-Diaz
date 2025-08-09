@@ -25,3 +25,7 @@
     transform: translateY(0);
   }
 }
+.btn-enviar-consulta {
+  background-color: #c29b5c;
+  border-color: #c29b5c;
+}

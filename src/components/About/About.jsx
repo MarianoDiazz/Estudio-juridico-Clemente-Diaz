@@ -7,7 +7,7 @@ const About = () => {
     <section id="sobre-nosotros" className="about-section">
       <Container>
         <Row className="align-items-center">
-          <Col md={6} data-aos="fade-right" data-aos-duration="800">
+          <Col md={6} data-aos="fade-up" data-aos-duration="800">
             <img
               src={NosotrosImg}
               alt="Sobre Nosotros"
@@ -16,9 +16,10 @@ const About = () => {
           </Col>
           <Col
             md={6}
-            data-aos="fade-left"
+            data-aos="fade-down"
             data-aos-duration="800"
             data-aos-delay="100"
+            className="mt-4"
           >
             <h2>Quiénes Somos</h2>
             <p>

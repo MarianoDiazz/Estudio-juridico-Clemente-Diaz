@@ -5,7 +5,11 @@ const Header = () => {
   return (
     <header className="hero-section">
       <div className="overlay"></div>
-      <Container className="text-center hero-content" data-aos="fade-up">
+      <Container
+        className="text-center hero-content"
+        data-aos="fade-up"
+        data-aos-duration="900"
+      >
         <h1 className="hero-title">
           Estudio Jurídico Clemente Díaz y Asociados
         </h1>

@@ -13,20 +13,18 @@ const ContactForm = () => {
 
     emailjs
       .sendForm(
-        "service_02qgn6u", // <- reemplazá esto
-        "template_di2qsrm", // <- reemplazá esto
+        "service_02qgn6u", //  service ID
+        "template_di2qsrm", // template ID
         form.current,
-        "JVka5ILw2szm9COPB" // <- reemplazá esto
+        "JVka5ILw2szm9COPB" // public key
       )
       .then(
-        (result) => {
-          console.log(result.text);
+        () => {
           setSent(true);
           setError(false);
           form.current.reset();
         },
-        (error) => {
-          console.log(error.text);
+        () => {
           setError(true);
         }
       );
@@ -48,12 +46,27 @@ const ContactForm = () => {
             <Form.Control type="email" name="user_email" required />
           </Form.Group>
 
+          <Form.Group className="mb-3" controlId="formTelefono">
+            <Form.Label>Número de celular</Form.Label>
+            <Form.Control
+              type="tel"
+              name="user_phone"
+              placeholder="ej:+54 9 3865 123456"
+              pattern="[0-9+ ]+"
+              required
+            />
+          </Form.Group>
+
           <Form.Group className="mb-3" controlId="formMensaje">
             <Form.Label>Mensaje o consulta</Form.Label>
             <Form.Control as="textarea" rows={5} name="message" required />
           </Form.Group>
 
-          <Button variant="primary" type="submit">
+          <Button
+            className="btn-enviar-consulta justify-content-center d-flex mx-auto"
+            variant="primary"
+            type="submit"
+          >
             Enviar consulta
           </Button>
 
