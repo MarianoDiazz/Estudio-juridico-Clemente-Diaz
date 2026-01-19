@@ -11,13 +11,13 @@ import img from "../../assets/nosotros.jpg"; // Cambia por la tuya
 const reasons = [
   {
     icon: <FaUserShield />,
-    text: "Atención personalizada y ética profesional",
+    text: "Atención personalizada y ética profesional.",
   },
-  { icon: <FaClock />, text: "Respuesta rápida y seguimiento constante" },
-  { icon: <FaHandshake />, text: "Trato humano, claridad y confianza" },
+  { icon: <FaClock />, text: "Respuesta rápida y seguimiento constante." },
+  { icon: <FaHandshake />, text: "Trato humano, claridad y confianza." },
   {
     icon: <FaBalanceScale />,
-    text: "Amplia experiencia en distintas ramas del derecho",
+    text: "Amplia experiencia en distintas ramas del derecho.",
   },
 ];
 
