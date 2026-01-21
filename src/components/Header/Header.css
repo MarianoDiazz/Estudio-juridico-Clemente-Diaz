@@ -1,81 +1,101 @@
-:root {
-  --color-accent: #c29b5c;
-  --color-bg-dark: #1b1b1b;
-  --color-light: #f7f7f7;
-}
-
 .hero-section {
   position: relative;
   background: url("../../assets/fondo.jpg") center/cover no-repeat;
   height: 100vh;
-  color: white;
   display: flex;
   align-items: center;
-  justify-content: center;
+  color: white;
 }
 
-.overlay {
+.hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(15, 15, 15, 0.6);
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 0.85),
+    rgba(20, 20, 20, 0.9)
+  );
   z-index: 1;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
-  padding: 20px;
+  max-width: 900px;
+  animation: fadeUp 1.2s ease;
 }
 
 .hero-title {
   font-family: "Playfair Display", serif;
-  font-size: 3rem;
-  color: var(--color-accent);
-  margin-bottom: 1rem;
-  animation: fadeInDown 1s ease;
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #c29b5c;
 }
 
-.hero-subtitle {
-  font-family: "Lato", sans-serif;
-  font-size: 1.25rem;
-  color: #e0e0e0;
-  margin-bottom: 2rem;
-  animation: fadeInUp 1.4s ease;
-}
-
-.hero-btn {
-  font-weight: bold;
-  background-color: white;
-  color: #333;
-  border: none;
-  padding: 10px 25px;
-  transition: all 0.3s ease;
-}
-
-.hero-btn:hover {
-  background-color: var(--color-accent);
+.hero-title span {
   color: white;
 }
 
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.hero-subtitle {
+  font-size: 1.6rem;
+  margin-top: 10px;
+  font-weight: 500;
 }
 
-@keyframes fadeInUp {
+.hero-text {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #e0e0e0;
+}
+
+.hero-location {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #bfbfbf;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.hero-btn-primary {
+  padding: 12px 28px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.hero-btn-primary:hover {
+  background-color: #c29b5c;
+  color: white;
+}
+
+.hero-btn-whatsapp {
+  background-color: #25d366;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s ease;
+}
+
+.hero-btn-whatsapp:hover {
+  background-color: #1ebe5d;
+  transform: translateY(-2px);
+}
+
+@keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(25px);
   }
   to {
     opacity: 1;
