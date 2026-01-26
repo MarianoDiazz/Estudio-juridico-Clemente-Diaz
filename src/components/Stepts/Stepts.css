@@ -1,0 +1,224 @@
+.steps-section{
+  position: relative;
+  background: var(--bg);
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.steps-container{
+  position: relative;
+  z-index: 2;
+}
+
+/* Fondo blueprint suave */
+.steps-bg{
+  position:absolute;
+  inset:0;
+  background:
+    repeating-linear-gradient(
+      to right,
+      rgba(18,29,49,.035) 0px,
+      rgba(18,29,49,.035) 1px,
+      transparent 1px,
+      transparent 90px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      rgba(18,29,49,.03) 0px,
+      rgba(18,29,49,.03) 1px,
+      transparent 1px,
+      transparent 90px
+    ),
+    radial-gradient(700px 420px at 15% 20%, rgba(18,29,49,.08), transparent 60%),
+    radial-gradient(600px 380px at 85% 35%, rgba(18,29,49,.06), transparent 55%),
+    linear-gradient(180deg, rgba(245,247,251,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+.section-kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-size: .85rem;
+  text-transform: uppercase;
+  letter-spacing: .35px;
+  color: var(--brand);
+  border: 1px dashed rgba(18,29,49,.35);
+  border-radius: 999px;
+  padding: 6px 12px;
+  background: rgba(255,255,255,.6);
+}
+
+.section-title{
+  margin-top: 14px;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: var(--text);
+}
+
+.section-text{
+  margin-top: 10px;
+  max-width: 60ch;
+  color: var(--muted);
+}
+
+/* Nota lateral */
+.steps-mini-note{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.steps-mini-note .dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--brand);
+  box-shadow: 0 0 0 6px rgba(18,29,49,.08);
+}
+
+/* Grid de pasos */
+.steps-grid{
+  display:grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.step-card{
+  background: rgba(255,255,255,.82);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.step-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(15,23,42,.12);
+}
+
+.step-top{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.step-number{
+  font-weight: 900;
+  color: rgba(18,29,49,.35);
+  letter-spacing: .5px;
+}
+
+.step-icon{
+  width: 42px;
+  height: 42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius: 14px;
+  background: rgba(18,29,49,.06);
+  border: 1px solid var(--border);
+  color: var(--brand);
+  font-size: 20px;
+}
+
+.step-title{
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text);
+  margin: 6px 0 8px;
+}
+
+.step-text{
+  color: var(--muted);
+  font-size: .95rem;
+  margin: 0;
+}
+
+/* CTA final */
+.steps-cta{
+  margin-top: 22px;
+  display:flex;
+  gap: 16px;
+  align-items:center;
+  justify-content: space-between;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.85);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.cta-left{
+  max-width: 62ch;
+}
+
+.cta-title{
+  margin: 0;
+  font-weight: 900;
+  color: var(--text);
+  font-size: 1.1rem;
+}
+
+.cta-text{
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+
+.cta-right{
+  display:flex;
+  gap: 12px;
+  align-items:center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.cta-btn{
+  background: var(--brand);
+  border: none;
+  font-weight: 700;
+  padding: 12px 18px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.cta-btn:hover{
+  background: var(--brandHover);
+}
+
+.cta-whatsapp{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.75);
+  border: 1px solid var(--border);
+  color: var(--brand);
+  text-decoration:none;
+  font-weight: 700;
+  transition: transform .2s ease, background .2s ease;
+}
+
+.cta-whatsapp:hover{
+  background: rgba(18,29,49,.06);
+  transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 991px){
+  .steps-grid{
+    grid-template-columns: 1fr;
+  }
+  .steps-cta{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cta-right{
+    justify-content: flex-start;
+  }
+}

@@ -1,51 +1,37 @@
-import { Navbar, Nav, Container } from "react-bootstrap";
-import { Link } from "react-scroll";
+import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import "./Navbar.css";
-import Logo from "../../assets/logo - copia.jpg"; // Asegúrate de tener el logo en la ruta correcta";
+import logo from "../../../public/favicon.ico"; // si luego querés usar logo
 
 const CustomNavbar = () => {
   return (
-    <Navbar expand="lg" variant="dark" fixed="top" className="custom-navbar">
+    <Navbar expand="lg" fixed="top" className="main-navbar">
       <Container>
-        <Navbar.Brand href="#">
+        <Navbar.Brand href="#inicio" className="navbar-brand">
+          {/* Si no querés logo aún, podés comentar la img */}
           <img
-            src={Logo}
-            alt="Logo Estudio Jurídico"
-            height="40"
-            className="d-inline-block align-top"
+            src={logo}
+            alt="Clemente Díaz y Asociados"
+            className="navbar-logo"
           />
+          <span className="brand-text">
+            Clemente Díaz <strong>& Asociados</strong>
+          </span>
         </Navbar.Brand>
 
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <Link
-              to="sobre-nosotros"
-              smooth={true}
-              duration={200}
-              className="nav-link"
-              offset={-80}
+        <Navbar.Toggle aria-controls="main-navbar-nav" />
+        <Navbar.Collapse id="main-navbar-nav">
+          <Nav className="ms-auto align-items-lg-center">
+            <Nav.Link href="#inicio">Inicio</Nav.Link>
+            <Nav.Link href="#servicios">Áreas de práctica</Nav.Link>
+            <Nav.Link href="#elegirnos">Por qué elegirnos</Nav.Link>
+            <Nav.Link href="#contacto">Contacto</Nav.Link>
+
+            <Button
+              className="navbar-cta ms-lg-3"
+              href="#contacto"
             >
-              Sobre Nosotros
-            </Link>
-            <Link
-              to="servicios"
-              smooth={true}
-              duration={200}
-              className="nav-link"
-              offset={-80}
-            >
-              Servicios
-            </Link>
-            <Link
-              to="contacto"
-              smooth={true}
-              duration={200}
-              className="nav-link"
-              offset={-80}
-            >
-              Contacto
-            </Link>
+              Hablá con un especialista
+            </Button>
           </Nav>
         </Navbar.Collapse>
       </Container>

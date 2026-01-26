@@ -8,12 +8,14 @@ import ContactForm from "./components/Contact/ContactForm.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import CustomNavbar from "./components/Navbar/Navbar.jsx";
 import WhyChooseUs from "./components/WhyChoseUs/WhyChooseUs.jsx";
+import Steps from "./components/Stepts/Stepts.jsx";
 
 function App() {
   return (
     <div>
       <CustomNavbar />
       <Header />
+      <Steps />
       <About />
       <Services />
       <WhyChooseUs />

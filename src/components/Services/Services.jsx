@@ -1,24 +1,22 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { FaBalanceScale, FaBriefcase, FaUsers } from "react-icons/fa";
 import "./Services.css";
 
 const services = [
   {
-    icon: <FaBalanceScale />,
     title: "Derecho Civil",
-    description:
-      "Contratos, accidentes de tránsito, propiedad, sucesiones y más.",
+    text: "Contratos, daños y perjuicios, sucesiones, propiedad y más.",
+    icon: <FaBalanceScale />,
   },
   {
-    icon: <FaBriefcase />,
     title: "Derecho Laboral",
-    description:
-      "Despidos, indemnizaciones, accidentes laborales, derechos del trabajador.",
+    text: "Despidos, indemnizaciones, accidentes laborales y defensa del trabajador.",
+    icon: <FaBriefcase />,
   },
   {
-    icon: <FaUsers />,
     title: "Derecho de Familia",
-    description: "Divorcios, alimentos, regímenes de visitas, filiación y más.",
+    text: "Divorcios, alimentos, régimen de visitas, filiación y más.",
+    icon: <FaUsers />,
   },
 ];
 
@@ -26,25 +24,27 @@ const Services = () => {
   return (
     <section id="servicios" className="services-section">
       <Container>
-        <h2 className="text-center mb-5">Servicios Legales</h2>
-        <Row className="justify-content-center">
-          {services.map((service, index) => (
-            <Col
-              md={6}
-              lg={4}
-              className="mb-4 d-flex justify-content-center"
-              key={index}
-              data-aos="zoom-in"
-              data-aos-delay={index * 100}
-            >
-              <div className="service-card">
-                <div className="service-icon">{service.icon}</div>
-                <h5>{service.title}</h5>
-                <p>{service.description}</p>
-              </div>
-            </Col>
+        <div className="services-head">
+          <div className="section-kicker">Áreas de práctica</div>
+          <h2 className="section-title">Servicios Legales</h2>
+          <p className="section-text">
+            Elegí el área que necesitás y coordinamos una consulta.
+          </p>
+        </div>
+
+        <div className="services-grid">
+          {services.map((s) => (
+            <article key={s.title} className="service-card" data-aos="fade-up">
+              <div className="service-icon">{s.icon}</div>
+              <h3 className="service-title">{s.title}</h3>
+              <p className="service-text">{s.text}</p>
+
+              <a className="service-link" href="#contacto">
+                Consultar ahora <span aria-hidden="true">→</span>
+              </a>
+            </article>
           ))}
-        </Row>
+        </div>
       </Container>
     </section>
   );
